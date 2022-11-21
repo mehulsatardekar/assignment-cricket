@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --body-bg-color: rgb(243, 243, 243);
+}
+
+body {
+  background: var(--body-bg-color);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/*sidebar section left side*/
+.container > .sidebar {
+  border: 1px solid rgb(12, 12, 12);
+  background: rgb(255, 255, 255);
+  margin: 10px;
+  flex: 3;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container > .sidebar > .title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.container > .sidebar > .words-searchlist {
+  border: 1px solid rgb(15, 15, 15);
+  height: 80vh;
+  margin: 15px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > .sidebar > .words-searchlist > .wordslist {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-top: 10px;
+  gap: 10px;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 70vh;
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.container > .sidebar > .words-searchlist > .wordslist > .listname {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* main contents includes input and grid section*/
+.container > .main-content {
+  margin: 10px;
+  flex: 11;
+  border-radius: 5px;
+  padding-bottom: 50rem;
+}
+
+.container > .main-content > .userinputs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.container > .main-content > .userinputs > .input {
+  width: 80%;
+  height: 40px;
+  font-size: 1.3rem;
+  padding-left: 10px;
+}
+
+.container > .main-content > .userinputs > .submit-btn {
+  background: #14c38e;
+  border: none;
+  padding: 0px 40px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.container > .main-content > .userinputs > .submit-btn:active {
+  background: #007250;
+}
+
+.container > .main-content > .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.container > .main-content > .grid-container > table {
+  grid-column: 1 / span 3;
+  border-collapse: collapse;
+  border: 3px solid black;
+  padding: 10px;
+}
+
+
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  font-weight: 500;
+  height: 25px;
+}
+
+.error-message{
+  margin-top: 1.2rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
